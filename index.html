@@ -2,194 +2,281 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Jacob Samudio · Portafolio Brutalista</title>
+  <title>Portafolio · Jacob Alexander Samudio Martínez</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css?v=ult">
+  <link rel="stylesheet" href="styles.css?v=brutal-final">
 </head>
 
 <body>
 
-<div class="frame-header">
-  <h1>JACOB SAMUDIO</h1>
-  <div class="line"></div>
-  <p class="subtitle">PORTAFOLIO ACADÉMICO · INGENIERÍA EN SISTEMAS</p>
-
-  <nav>
-    <a href="#sobre">SOBRE MÍ</a>
-    <a href="#estructura">ESTRUCTURA</a>
+<!-- CABECERA PRINCIPAL -->
+<header class="header">
+  <div class="header-left">
+    <h1>JACOB SAMUDIO</h1>
+    <p class="header-subtitle">PORTAFOLIO ACADÉMICO · INGENIERÍA EN SISTEMAS</p>
+  </div>
+  <nav class="header-nav">
+    <a href="#sobre-mi">SOBRE MÍ</a>
+    <a href="#resumen">RESUMEN</a>
     <a href="#proyectos">PROYECTOS</a>
+    <a href="#detalle-pos">SISTEMA POS</a>
     <a href="#habilidades">HABILIDADES</a>
     <a href="#contacto">CONTACTO</a>
   </nav>
-</div>
+</header>
 
+<main>
 
-<section id="sobre" class="panel">
-  <h2>SOBRE MÍ</h2>
+<!-- SOBRE MÍ -->
+<section id="sobre-mi" class="panel">
+  <h2>01 · SOBRE MÍ</h2>
   <p>
-    Estudiante de Ingeniería en Sistemas con enfoque en programación estructurada,
-    bases de datos, servidores y arquitectura de red.
+    Soy estudiante de Ingeniería en Sistemas con interés en el desarrollo de software,
+    la administración de servidores y el diseño de redes. Durante el curso
+    <strong>Desarrollo Lógico y Algoritmo</strong> trabajé sobre problemas concretos:
+    simulación de empresas, servidores de respaldo, evaluaciones lógicas y el desarrollo
+    de un sistema POS funcional.
   </p>
   <p>
-    A lo largo de este período académico se desarrollaron ejercicios prácticos,
-    sistemas funcionales, laboratorios en entornos virtualizados y aplicaciones reales
-    que integran programación, lógica y comunicación de datos.
-  </p>
-  <p>
-    Este portafolio se presenta como un archivo estructural de trabajo técnico,
-    no como una galería decorativa, sino como evidencia de evolución académica.
+    Este portafolio no busca ser una página decorativa, sino un registro estructurado
+    de las evidencias técnicas que demuestran el avance en programación, análisis y
+    diseño de soluciones.
   </p>
 </section>
 
+<!-- RESUMEN GENERAL DEL CURSO -->
+<section id="resumen" class="panel panel-outline">
+  <h2>02 · RESUMEN DEL CURSO</h2>
 
-<section id="estructura" class="panel">
-  <h2>ESTRUCTURA DEL PORTAFOLIO</h2>
+  <div class="summary-grid">
+    <div class="summary-block">
+      <h3>PROGRAMACIÓN</h3>
+      <p>
+        Ejercicios en <strong>C</strong> y <strong>Python</strong> que abarcan algoritmos,
+        validación de datos, estructuras de control, manejo de errores y construcción
+        de interfaces gráficas con <strong>Tkinter</strong>.
+      </p>
+    </div>
 
-  <div class="block">
-    <h3>DOCUMENTACIÓN</h3>
-    <p>PDF técnicos: reportes, prácticas, parciales, análisis.</p>
-  </div>
+    <div class="summary-block">
+      <h3>BASES DE DATOS</h3>
+      <p>
+        Diseño de esquemas relacionales, consultas, operaciones CRUD y conexión
+        desde aplicaciones en Python a <strong>MySQL</strong> para sistemas como
+        el POS de <strong>CHINOS CAFÉ</strong>.
+      </p>
+    </div>
 
-  <div class="block">
-    <h3>CÓDIGO</h3>
-    <p>Programas en Python, C, conexión a base de datos, Tkinter.</p>
-  </div>
+    <div class="summary-block">
+      <h3>SERVIDORES</h3>
+      <p>
+        Instalación y configuración de <strong>Windows Server</strong>, servicios de
+        escritorio remoto, FTP y entornos de trabajo sobre máquinas virtuales.
+      </p>
+    </div>
 
-  <div class="block">
-    <h3>SISTEMAS</h3>
-    <p>POS, servidor, red, base de datos, operaciones.</p>
-  </div>
-
-  <div class="block">
-    <h3>REDES</h3>
-    <p>Simulación LAN, conexión remota, infraestructura virtual.</p>
+    <div class="summary-block">
+      <h3>REDES Y ESTRUCTURA</h3>
+      <p>
+        Simulación de redes LAN, configuración de servicios y diseño lógico de la
+        infraestructura necesaria para que los sistemas puedan operar en un entorno
+        más cercano a un escenario real.
+      </p>
+    </div>
   </div>
 </section>
 
+<!-- PROYECTOS PRINCIPALES -->
+<section id="proyectos" class="panel panel-dark">
+  <h2>03 · PROYECTOS PRINCIPALES</h2>
 
-<section id="proyectos" class="panel dark">
+  <div class="projects-grid">
 
-  <h2>PROYECTOS ACADÉMICOS</h2>
+    <!-- EMPRESA XYZ -->
+    <article class="project-card">
+      <span class="project-tag">SISTEMA</span>
+      <h3>EMPRESA XYZ · SISTEMA DE ALQUILER</h3>
+      <p>
+        Proyecto que simula el funcionamiento de una empresa de alquiler de equipos.
+        Incluye el análisis de procesos, la aplicación de algoritmos de búsqueda
+        secuencial y manejo de pila (Push Down), el diseño de base de datos relacional
+        en MySQL y un prototipo programado en Python para gestionar los registros
+        de alquileres.
+      </p>
+      <p>
+        Además, se diseñó la estructura de red LAN en una herramienta de simulación,
+        considerando la comunicación entre los equipos y el servidor de datos.
+      </p>
+      <a class="btn"
+         target="_blank"
+         href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Taller%20Pr%C3%A1ctico1_final.pdf&embedded=true">
+        VER REPORTE
+      </a>
+    </article>
 
-  <article class="project brutal">
-    <span class="tag">SISTEMA MAESTRO</span>
-    <h3>CHINOS CAFÉ — SISTEMA POS</h3>
-    <p>
-      Sistema de punto de venta completo implementado en Python con interfaz gráfica
-      usando Tkinter y base de datos MySQL conectada en red.
-    </p>
-    <ul>
-      <li>Control de inventario</li>
-      <li>Registro de proveedores</li>
-      <li>Facturación</li>
-      <li>Base de datos en red</li>
-    </ul>
-    <a target="_blank"
-       href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Examen%20Parcial2(entrega).pdf&embedded=true">
-       ABRIR DOCUMENTACIÓN
-    </a>
-  </article>
+    <!-- ALGORITMOS EN C -->
+    <article class="project-card">
+      <span class="project-tag">PROGRAMACIÓN</span>
+      <h3>EJERCICIO PRÁCTICO 1 · ALGORITMOS EN C</h3>
+      <p>
+        Colección de programas desarrollados en C junto a su pseudocódigo y diagramas
+        de flujo. Los ejercicios trabajan cálculos de notas, sueldos, validación de
+        entradas, operaciones matemáticas y lógica condicional.
+      </p>
+      <p>
+        El enfoque principal fue aprender a traducir un problema descrito en lenguaje
+        natural a pseudocódigo, diagrama y finalmente a código ejecutable,
+        controlando errores y casos especiales.
+      </p>
+      <a class="btn"
+         target="_blank"
+         href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Ejercicio%20practico%201.pdf&embedded=true">
+        VER PRÁCTICA
+      </a>
+    </article>
 
+    <!-- WINDOWS SERVER -->
+    <article class="project-card">
+      <span class="project-tag">SERVIDORES</span>
+      <h3>EJERCICIO PRÁCTICO 2 · WINDOWS SERVER</h3>
+      <p>
+        Implementación de un servidor en un entorno virtualizado con Windows Server.
+        Se configuraron carpetas de respaldo, usuarios, permisos, conexiones remotas
+        y servicios necesarios para que un cliente pueda trabajar sobre los recursos
+        del servidor.
+      </p>
+      <p>
+        El objetivo fue entender el rol del servidor dentro de la red y cómo se
+        gestionan los recursos compartidos en un entorno centralizado.
+      </p>
+      <a class="btn"
+         target="_blank"
+         href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Ejercicio_Pr%C3%A1ctico_2.pdf&embedded=true">
+        VER LABORATORIO
+      </a>
+    </article>
 
-  <article class="project">
-    <span class="tag">SISTEMA</span>
-    <h3>EMPRESA XYZ — SISTEMA DE ALQUILER</h3>
-    <p>
-      Sistema de gestión de alquiler con aplicación de algoritmos de búsqueda secuencial,
-      manejo Push Down, base de datos relacional y prototipo en Python.
-    </p>
-    <a target="_blank"
-       href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Taller%20Pr%C3%A1ctico1_final.pdf&embedded=true">
-       VER REPORTE
-    </a>
-  </article>
+    <!-- SERVIDOR DE DATOS -->
+    <article class="project-card">
+      <span class="project-tag">INFRAESTRUCTURA</span>
+      <h3>LABORATORIO PRÁCTICO 1 · SERVIDOR DE DATOS</h3>
+      <p>
+        Creación de un servidor de datos orientado a respaldos y almacenamiento
+        centralizado. Se definieron carpetas, se probaron accesos remotos y se
+        verificó el funcionamiento del entorno como base para otros sistemas.
+      </p>
+      <p>
+        Sirvió como soporte para el resto de proyectos que dependen de un entorno
+        de red funcional y controlado.
+      </p>
+      <a class="btn"
+         target="_blank"
+         href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Laboratorio%20Pr%C3%A1ctico%201%20(Version%20final)%20(1).pdf&embedded=true">
+        VER DOCUMENTO
+      </a>
+    </article>
 
+    <!-- PARCIAL 1 -->
+    <article class="project-card">
+      <span class="project-tag">EVALUACIÓN</span>
+      <h3>PARCIAL 1 · LÓGICA Y ALGORITMOS</h3>
+      <p>
+        Examen práctico enfocado en el manejo de fechas, conversión de tiempos,
+        cálculo de edad, control de condiciones especiales y estructuras lógicas.
+      </p>
+      <p>
+        La evaluación mostró el dominio del flujo de instrucciones y la capacidad
+        de representar problemas matemáticos usando pseudocódigo y lenguaje C.
+      </p>
+      <a class="btn"
+         target="_blank"
+         href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Parcial%201_jacobsamudio.pdf&embedded=true">
+        VER EXAMEN
+      </a>
+    </article>
 
-  <article class="project">
-    <span class="tag">PROGRAMACIÓN</span>
-    <h3>ALGORITMOS EN C</h3>
-    <p>
-      Implementación de programas usando control de flujo,
-      validación de datos, lógica matemática y condicionales.
-    </p>
-    <a target="_blank"
-       href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Ejercicio%20practico%201.pdf&embedded=true">
-       VER PRÁCTICA
-    </a>
-  </article>
-
-
-  <article class="project">
-    <span class="tag">SERVIDORES</span>
-    <h3>WINDOWS SERVER</h3>
-    <p>
-      Configuración de servidores con servicios de acceso remoto,
-      carpetas compartidas, FTP y entorno virtualizado.
-    </p>
-    <a target="_blank"
-       href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Ejercicio_Pr%C3%A1ctico_2.pdf&embedded=true">
-       VER LABORATORIO
-    </a>
-  </article>
-
-
-  <article class="project">
-    <span class="tag">EVALUACIÓN</span>
-    <h3>PARCIAL 1</h3>
-    <p>
-      Ejercicios de evaluación técnica sobre conversión de tiempo,
-      fechas y lógica de programación.
-    </p>
-    <a target="_blank"
-       href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Parcial%201_jacobsamudio.pdf&embedded=true">
-       VER EXAMEN
-    </a>
-  </article>
-
-
-  <article class="project">
-    <span class="tag">INFRAESTRUCTURA</span>
-    <h3>SERVIDOR DE DATOS</h3>
-    <p>
-      Implementación de servidor de respaldo, directorios y servicios remotos.
-    </p>
-    <a target="_blank"
-       href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Laboratorio%20Pr%C3%A1ctico%201%20(Version%20final)%20(1).pdf&embedded=true">
-       VER PRÁCTICA
-    </a>
-  </article>
-
+  </div>
 </section>
 
+<!-- DETALLE ESPECIAL DEL POS -->
+<section id="detalle-pos" class="panel panel-highlight">
+  <h2>04 · SISTEMA POS “CHINOS CAFÉ”</h2>
 
+  <div class="pos-layout">
+    <div>
+      <h3>Descripción general</h3>
+      <p>
+        CHINOS CAFÉ es un sistema de punto de venta desarrollado en Python con
+        interfaz gráfica (Tkinter) y base de datos MySQL. Está diseñado para
+        gestionar compras, inventario, proveedores y facturación de un negocio
+        real, integrando varios módulos en un solo sistema.
+      </p>
+      <p>
+        El sistema se conecta a una base de datos en red, permite registrar nuevas
+        ventas, actualizar existencias, consultar información y generar facturas.
+      </p>
+      <a class="btn btn-secondary"
+         target="_blank"
+         href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Examen%20Parcial2(entrega).pdf&embedded=true">
+        VER DOCUMENTO COMPLETO
+      </a>
+    </div>
+
+    <div class="pos-columns">
+      <div>
+        <h4>Módulos principales</h4>
+        <ul>
+          <li>Módulo de inventario</li>
+          <li>Módulo de ventas</li>
+          <li>Módulo de proveedores</li>
+          <li>Módulo de facturación</li>
+          <li>Conexión a MySQL</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Aspectos técnicos</h4>
+        <ul>
+          <li>Python + Tkinter</li>
+          <li>Base de datos MySQL</li>
+          <li>Conexión en red</li>
+          <li>Diseño de tablas y claves</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HABILIDADES -->
 <section id="habilidades" class="panel">
-  <h2>HABILIDADES</h2>
-
-  <div class="columns">
-    <div>Python</div>
-    <div>C</div>
-    <div>MySQL</div>
-    <div>PSeInt</div>
-    <div>Windows Server</div>
-    <div>Redes LAN</div>
-    <div>Packet Tracer</div>
-    <div>Algoritmos</div>
-    <div>Control de errores</div>
-    <div>CRUD</div>
-    <div>Conexión BD</div>
-    <div>GUI Tkinter</div>
+  <h2>05 · HABILIDADES</h2>
+  <div class="skills-grid">
+    <span>Python</span>
+    <span>Lenguaje C</span>
+    <span>MySQL</span>
+    <span>PSeInt</span>
+    <span>Windows Server</span>
+    <span>Redes LAN</span>
+    <span>Cisco Packet Tracer</span>
+    <span>Algoritmos y lógica</span>
+    <span>CRUD</span>
+    <span>Interfaces Tkinter</span>
+    <span>Control de errores</span>
   </div>
 </section>
 
-
-<section id="contacto" class="panel">
-  <h2>CONTACTO</h2>
-  <p class="contact">jacob.samudio@utp.ac.pa</p>
+<!-- CONTACTO -->
+<section id="contacto" class="panel panel-outline">
+  <h2>06 · CONTACTO</h2>
+  <p>Correo institucional:</p>
+  <p class="contact-email">
+    <a href="mailto:jacob.samudio@utp.ac.pa">jacob.samudio@utp.ac.pa</a>
+  </p>
 </section>
 
+</main>
 
-<footer>
-  <p>Portafolio académico brutalista · Universidad Tecnológica de Panamá</p>
+<footer class="footer">
+  <p>Portafolio académico · Universidad Tecnológica de Panamá</p>
 </footer>
 
 </body>
