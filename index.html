@@ -8,7 +8,24 @@
 
   <!-- ICONOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-@@ -29,18 +29,25 @@ <h1>JACOB SAMUDIO</h1>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-left">
+    <h1>JACOB SAMUDIO</h1>
+    <p class="header-subtitle">PORTAFOLIO ACADÉMICO · INGENIERÍA EN SISTEMAS</p>
+  </div>
+  <nav class="header-nav">
+    <a href="#sobre-mi">SOBRE MÍ</a>
+    <a href="#resumen">RESUMEN</a>
+    <a href="#proyectos">PROYECTOS</a>
+    <a href="#detalle-pos">SISTEMA POS</a>
+    <a href="#habilidades">HABILIDADES</a>
+    <a href="#contacto">CONTACTO</a>
+  </nav>
+</header>
 
 <main>
 
@@ -34,7 +51,12 @@
   </p>
 </section>
 
-@@ -53,31 +60,42 @@ <h2>02 · RESUMEN DEL CURSO</h2>
+<!-- RESUMEN -->
+<section id="resumen" class="panel panel-outline">
+  <h2>02 · RESUMEN DEL CURSO</h2>
+
+  <div class="summary-grid">
+
     <div class="summary-block">
       <h3>PROGRAMACIÓN</h3>
       <p>
@@ -77,18 +99,19 @@
       </p>
     </div>
 
-@@ -90,141 +108,115 @@ <h2>03 · PROYECTOS PRINCIPALES</h2>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos" class="panel panel-dark">
+  <h2>03 · PROYECTOS PRINCIPALES</h2>
 
   <div class="projects-grid">
 
-
     <article class="project-card">
       <img class="project-img" src="imagenes/taller.jpg">
-
-
       <span class="project-tag">SISTEMA EMPRESARIAL</span>
       <h3>TALLER PRÁCTICO 1 · SISTEMA DE ALQUILER</h3>
-
       <p>
         Desarrollo de un sistema empresarial de alquiler de equipos
         integrando algoritmos de búsqueda secuencial,
@@ -96,120 +119,84 @@
         diseño de base de datos
         y prototipo funcional en Python.
       </p>
-
       <p>
         El sistema administra clientes,
         equipos y alquileres
         con una estructura lógica organizada.
       </p>
-
       <a class="btn" target="_blank"
          href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Taller%20Pr%C3%A1ctico1_final.pdf&embedded=true">
         VER DOCUMENTACIÓN
       </a>
-
     </article>
-
 
     <article class="project-card">
       <img class="project-img" src="imagenes/algoritmos.jpg">
-
-
       <span class="project-tag">PROGRAMACIÓN</span>
       <h3>EJERCICIO PRÁCTICO · LENGUAJE C</h3>
-
       <p>
         Desarrollo de ejercicios algorítmicos
         usando estructuras condicionales,
         ciclos, validación de datos
         y lógica matemática.
       </p>
-
       <p>
         Incluye cálculos de notas,
         sueldos
         y operaciones numéricas.
       </p>
-
       <a class="btn" target="_blank"
          href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Ejercicio%20practico%201.pdf&embedded=true">
         VER PRÁCTICA
       </a>
-
     </article>
-
 
     <article class="project-card">
       <img class="project-img" src="imagenes/server.jpg">
-
-
       <span class="project-tag">SERVIDORES</span>
       <h3>EJERCICIO PRÁCTICO · WINDOWS SERVER</h3>
-
       <p>
         Instalación y configuración de Windows Server
         bajo un entorno virtualizado.
       </p>
-
       <p>
         Implementación de FTP,
         accesos remotos
         y usuarios.
       </p>
-
       <a class="btn" target="_blank"
          href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Ejercicio_Pr%C3%A1ctico_2.pdf&embedded=true">
         VER DOCUMENTACIÓN
       </a>
-
     </article>
-
 
     <article class="project-card">
       <img class="project-img" src="imagenes/datos.jpg">
-
-
       <span class="project-tag">INFRAESTRUCTURA</span>
       <h3>LABORATORIO · SERVIDOR DE DATOS</h3>
-
       <p>
         Implementación de estructura de respaldo
         con control de acceso.
       </p>
-
       <p>
         Apoyo a infraestructura general.
       </p>
-
       <a class="btn" target="_blank"
          href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Laboratorio%20Pr%C3%A1ctico%201%20(Version%20final)%20(1).pdf&embedded=true">
         VER LABORATORIO
       </a>
-
     </article>
-
 
     <article class="project-card">
       <img class="project-img" src="imagenes/examen.jpg">
-
-
       <span class="project-tag">EVALUACIÓN</span>
       <h3>PARCIAL · LÓGICA</h3>
       <p>Evaluación aplicada a estructuras lógicas.</p>
       <p>Demuestra análisis y criterio algorítmico.</p>
-
-
-
-
-
-
-
-
       <a class="btn" target="_blank"
          href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Parcial%201_jacobsamudio.pdf&embedded=true">
         VER EXAMEN
       </a>
-
     </article>
 
   </div>
@@ -233,17 +220,36 @@
   </p>
 
   <div class="pos-columns">
-@@ -253,33 +245,50 @@ <h4>TECNOLOGÍA</h4>
+    <div>
+      <h4>MÓDULOS</h4>
+      <ul>
+        <li>Inventario</li>
+        <li>Ventas</li>
+        <li>Proveedores</li>
+        <li>Facturación</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>TECNOLOGÍA</h4>
+      <ul>
+        <li>Python</li>
+        <li>Tkinter</li>
+        <li>MySQL</li>
+        <li>Red local</li>
+      </ul>
+    </div>
+  </div>
+
+  <a class="btn btn-secondary" target="_blank"
      href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Examen%20Parcial2(entrega).pdf&embedded=true">
     VER DOCUMENTACIÓN COMPLETA
   </a>
-
 </section>
 
 <!-- HABILIDADES -->
 <section id="habilidades" class="panel">
   <h2>05 · HABILIDADES TÉCNICAS</h2>
-
   <div class="skills-grid">
 
     <div class="skill"><i class="fa-brands fa-python"></i> Python</div>
@@ -287,3 +293,9 @@
 
 </main>
 
+<footer class="footer">
+  <p>Portafolio académico · Universidad Tecnológica de Panamá</p>
+</footer>
+
+</body>
+</html>
