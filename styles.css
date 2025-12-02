@@ -11,7 +11,9 @@
 :root {
   --bg: #050308;
   --bg-alt: #090712;
-@@ -15,64 +17,75 @@
+  --bg-strong: #050307;
+  --fg: #f4f4f4;
+  --muted: #b3b3b3;
   --accent: #c41e3a;
   --accent-soft: #8b1b32;
   --border: #2a242e;
@@ -81,14 +83,17 @@ body {
   box-shadow: 0 0 8px rgba(196,30,58,.25);
 }
 
-
 /* PANEL */
 .panel {
   padding: 3rem;
   border-bottom: 1px solid var(--border);
 }
 
-@@ -84,23 +97,24 @@ body {
+.panel-dark { background: var(--bg-alt); }
+
+.panel-outline {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .panel-highlight {
@@ -113,7 +118,8 @@ body {
   color: var(--muted);
   font-size: 0.95rem;
 }
-@@ -109,151 +123,178 @@ body {
+
+/* RESUMEN */
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -212,12 +218,6 @@ body {
 }
 
 /* POS */
-
-
-
-
-
-
 .pos-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -230,8 +230,6 @@ body {
   text-transform: uppercase;
   color: var(--accent-soft);
 }
-
-
 
 /* HABILIDADES */
 .skills-grid {
@@ -282,7 +280,6 @@ body {
   border-top: 1px solid var(--border);
   background: #050308;
 }
-
 
 /* RESPONSIVE */
 @media (max-width:768px) {
