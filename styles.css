@@ -1,8 +1,3 @@
-/* ========================================================
-    ESTILOS CSS - PORTAFOLIO PROFESIONAL JACOB SAMUDIO
-    ========================================================
-*/
-
 /* RESET PROFESIONAL */
 *,
 *::before,
@@ -16,10 +11,8 @@
 :root {
   --bg: #050308;
   --bg-alt: #090712;
-  --bg-strong: #050307;
-  --fg: #f4f4f4;
-  --muted: #b3b3b3;
-  --accent: #c41e3a; /* Rojo oscuro profesional */
+@@ -15,64 +17,75 @@
+  --accent: #c41e3a;
   --accent-soft: #8b1b32;
   --border: #2a242e;
   --radius: 3px;
@@ -30,19 +23,11 @@
 body {
   background: linear-gradient(180deg, #050308, #07040b);
   color: var(--fg);
-  /* Usando Inter, asegurado en el HTML con el link tag */
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.7;
-  scroll-behavior: smooth;
 }
 
-/* Contenedor principal para centrar el contenido en pantallas grandes */
-.site-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* CABECERA (Header) */
+/* CABECERA */
 .header {
   position: sticky;
   top: 0;
@@ -55,21 +40,12 @@ body {
   border-bottom: 2px solid var(--border);
   background: rgba(5,3,7,0.95);
   backdrop-filter: blur(6px);
-  width: 100%; 
 }
 
-.header-branding .logo-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.header-branding .logo-name {
+.header-left h1 {
   font-size: 2.4rem;
   letter-spacing: 0.38em;
   text-transform: uppercase;
-  font-weight: 900;
-  margin-bottom: 0;
 }
 
 .header-subtitle {
@@ -79,7 +55,7 @@ body {
   letter-spacing: 0.12em;
 }
 
-/* NAVEGACION (Nav) */
+/* NAVEGACION */
 .header-nav {
   display: flex;
   flex-wrap: wrap;
@@ -105,33 +81,14 @@ body {
   box-shadow: 0 0 8px rgba(196,30,58,.25);
 }
 
-/* Estilo para el botón de contacto en la navegación (CTA) */
-.header-nav .btn-nav-cta {
-    background: var(--accent);
-    border-color: var(--accent);
-    padding: 0.6rem 1.1rem;
-    font-weight: 700;
-}
 
-.header-nav .btn-nav-cta:hover {
-    background: linear-gradient(145deg,#c41e3a,#ff2c4d);
-    border-color: #ff2c4d;
-    box-shadow: 0 0 12px rgba(255,44,77,.5);
-    transform: translateY(-1px);
-}
-
-/* Panel Base */
+/* PANEL */
 .panel {
   padding: 3rem;
   border-bottom: 1px solid var(--border);
 }
 
-/* Modificadores de Panel */
-.panel-dark { background: var(--bg-alt); }
-
-.panel-outline {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+@@ -84,23 +97,24 @@ body {
 }
 
 .panel-highlight {
@@ -140,7 +97,7 @@ body {
   border-bottom: 2px solid var(--accent-soft);
 }
 
-/* TITULOS (H2 de Sección) */
+/* TITULOS */
 .panel h2 {
   font-size: 1rem;
   letter-spacing: 0.32em;
@@ -148,34 +105,15 @@ body {
   border-left: 4px solid var(--accent);
   padding-left: 1rem;
   margin-bottom: 1.6rem;
-  font-weight: 700;
 }
 
-/* Estilos específicos de la sección HERO (Sobre Mí) */
-.hero-section .tagline {
-    font-size: 1.5rem;
-    color: var(--fg);
-    margin-bottom: 2rem;
-    font-weight: 300;
-    letter-spacing: 0.05em;
-}
-
-/* Descripciones de Sección (Párrafo introductorio) */
-.section-description {
-    color: var(--fg);
-    font-size: 1.1rem;
-    margin-bottom: 2rem !important;
-    font-weight: 300;
-}
-
-/* TEXTO de Párrafos */
+/* TEXTO */
 .panel p {
   margin-bottom: 0.9rem;
   color: var(--muted);
   font-size: 0.95rem;
 }
-
-/* RESUMEN (Áreas de Conocimiento) */
+@@ -109,151 +123,178 @@ body {
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -188,30 +126,14 @@ body {
   border: 1px solid var(--border);
   background: var(--bg-alt);
   transition: transform .25s ease, box-shadow .25s ease;
-  border-radius: var(--radius);
-}
-
-.summary-block h3 {
-    font-size: 1.1rem;
-    color: var(--accent);
-    margin-bottom: 0.6rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
 }
 
 .summary-block:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow);
-  border-color: var(--accent-soft);
 }
 
 /* PROYECTOS */
-.projects-section .section-description {
-    margin-top: -1rem;
-    margin-bottom: 2rem;
-}
-
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -225,15 +147,6 @@ body {
   padding: 1.3rem;
   position: relative;
   transition: all 0.3s ease;
-  border-radius: 8px; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.project-card h3 {
-    margin: 0.3rem 0 0.8rem;
-    font-size: 1.25rem;
-    color: var(--fg);
-    min-height: 3rem; /* Espacio para títulos largos */
 }
 
 .project-card:hover {
@@ -248,75 +161,27 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent-soft);
-  font-weight: 600;
 }
 
-/* IMÁGENES PROYECTOS (Versión anterior con filtro) */
-.project-image-container {
-    overflow: hidden;
-    margin: 0.8rem 0;
-    border-radius: var(--radius);
-}
+/* IMÁGENES PROYECTOS */
 .project-img {
   width: 100%;
   height: 170px;
   object-fit: cover;
-  /* FILTROS ANTERIORES */
-  filter: grayscale(100%) contrast(1.2);
+  margin: 0.8rem 0;
+  filter: grayscale(85%) contrast(1.1);
   border: 1px solid var(--border);
   transition: .35s ease;
 }
 
 .project-card:hover .project-img {
-  /* EFECTO HOVER ANTERIOR */
-  filter: grayscale(0%) contrast(1);
-  transform: scale(1.05); 
+  filter: grayscale(25%) contrast(1.25);
+  transform: scale(1.03);
 }
 
-/* Bloque de proyectos adicionales (aside) */
-.more-projects-block {
-    grid-column: 1 / -1; 
-    background: var(--bg-alt);
-    padding: 1.5rem;
-    border: 1px dashed var(--border);
-    border-radius: 8px;
-}
-.more-projects-block h4 {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent-soft);
-    margin-bottom: 0.8rem;
-}
-.more-projects-block ul {
-    list-style: none;
-    padding-left: 0;
-}
-.more-projects-block li {
-    font-size: 0.9rem;
-    color: var(--muted);
-    margin-bottom: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px dotted #1a151f;
-    padding-bottom: 0.3rem;
-}
-.more-projects-block li a {
-    color: var(--accent);
-    margin-left: 0.5rem;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-.more-projects-block li a:hover {
-    color: #ff2c4d;
-}
-
-/* BOTONES (Clase base y modificadores) */
+/* BOTONES */
 .btn,
-.btn-secondary,
-.btn-doc,
-.btn-primary-cta {
+.btn-secondary {
   display: inline-block;
   margin-top: 0.9rem;
   padding: 0.5rem 1rem;
@@ -328,35 +193,13 @@ body {
   color: var(--fg);
   background: transparent;
   transition: all 0.25s ease;
-  border-radius: var(--radius);
-  text-align: center;
-  cursor: pointer; /* Asegura el cursor de interacción */
 }
 
-/* Botón principal CTA en la sección 'Sobre Mí' */
-.btn-primary-cta {
-    background: var(--accent);
-    border-color: var(--accent);
-    padding: 0.75rem 1.5rem;
-    font-size: 0.8rem;
-    margin-top: 1.5rem;
-    font-weight: 600;
-    border: none;
-}
-.btn-primary-cta:hover {
-    background: linear-gradient(145deg,#ff2c4d,#c41e3a);
-    box-shadow: 0 0 15px rgba(255,44,77,.4);
-}
-
-/* Botones de documentación en proyectos (full width) */
-.btn-doc {
+.btn {
   background: linear-gradient(145deg,#8b1b32,#c41e3a);
-  border: none;
-  font-weight: 600;
-  width: 100%;
 }
 
-.btn-doc:hover {
+.btn:hover {
   background: linear-gradient(145deg,#c41e3a,#ff2c4d);
 }
 
@@ -368,110 +211,29 @@ body {
   background: var(--accent-soft);
 }
 
-/* DETALLE DEL PROYECTO POS (Destacado) */
-.pos-project-detail {
-    text-align: center;
-}
-.pos-project-detail .project-main-image {
-    margin: 2rem auto;
-    max-width: 800px;
-}
-.pos-project-detail .project-img {
-    height: auto;
-    max-height: 400px;
-    filter: none;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-}
-.pos-project-detail figcaption {
-    font-size: 0.8rem;
-    color: var(--accent-soft);
-    margin-top: 0.5rem;
-    letter-spacing: 0.05em;
-}
+/* POS */
 
-.pos-content-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    text-align: left;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-}
 
-.pos-description {
-    padding-right: 1.5rem;
-    border-right: 1px solid var(--border);
-}
 
-.pos-details {
-    background: var(--bg-strong);
-    padding: 1rem;
-    border: 1px solid var(--accent-soft);
-    border-radius: var(--radius);
-}
+
+
 
 .pos-columns {
-  display: flex; 
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.2rem;
 }
 
 .pos-columns h4 {
   font-size: 0.72rem;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--accent); 
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  color: var(--accent-soft);
 }
 
-.pos-columns ul {
-    list-style: none;
-    padding: 0;
-}
-.pos-columns li {
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
-}
 
-.btn-full-width {
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.85rem;
-}
 
 /* HABILIDADES */
-.skills-section h2 {
-    margin-bottom: 0.5rem;
-}
-.skills-section .section-description {
-    margin-bottom: 2rem;
-}
-
-.skills-category {
-    margin-bottom: 2rem;
-}
-
-.skills-category h3 {
-    font-size: 1.2rem;
-    color: var(--fg);
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.3rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.skills-category h3 i {
-    color: var(--accent);
-}
-
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
@@ -487,7 +249,6 @@ body {
   padding: 0.4rem 0.85rem;
   font-size: 0.75rem;
   transition: all .2s ease;
-  border-radius: var(--radius);
 }
 
 .skill:hover {
@@ -501,39 +262,16 @@ body {
 }
 
 /* CONTACTO */
-.contact-section {
-    text-align: center;
-}
-.contact-email-link { 
+.contact-email {
   color: var(--fg);
   display: inline-block;
-  font-size: 1.5rem;
   border-bottom: 1px dashed var(--accent-soft);
   text-decoration: none;
   transition: .2s;
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
 }
 
-.contact-email-link:hover {
+.contact-email:hover {
   color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-.social-links {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-.social-links a {
-    color: var(--muted);
-    transition: color 0.2s ease;
-}
-.social-links a:hover {
-    color: var(--accent);
 }
 
 /* FOOTER */
@@ -543,94 +281,23 @@ body {
   text-align: center;
   border-top: 1px solid var(--border);
   background: #050308;
-  font-size: 0.8rem;
-  line-height: 1.4;
-}
-.footer-credits {
-    margin-top: 0.5rem;
-    font-size: 0.7rem;
-    color: #555;
 }
 
-/* ========================================================
-    RESPONSIVE DESIGN (Media Queries)
-    ========================================================
-*/
 
-@media (max-width: 1024px) {
-    /* Ajustes para tabletas */
-    .pos-content-grid {
-        grid-template-columns: 1fr;
-    }
-    .pos-description {
-        border-right: none;
-        padding-right: 0;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid var(--border);
-    }
-    .pos-details {
-        text-align: left;
-    }
-    .pos-columns {
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 1rem;
-    }
-}
-
+/* RESPONSIVE */
 @media (max-width:768px) {
 
-  .header {
-    padding: 1.6rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .header-nav {
-      width: 100%;
-      margin-top: 1rem;
-      justify-content: space-between;
-      gap: 0.5rem;
-  }
-
-  .header-nav a {
-      flex-grow: 1; 
-      text-align: center;
-      padding: 0.4rem 0.6rem;
-  }
-  
-  .header-branding .logo-name {
-    font-size: 2rem;
-  }
-
+  .header,
   .panel {
     padding: 1.6rem;
   }
 
+  .header-left h1 {
+    font-size: 2rem;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
-  }
-  
-  .summary-grid {
-      grid-template-columns: 1fr;
-  }
-  
-  .pos-columns {
-      flex-direction: column;
-      gap: 0.8rem;
-  }
-  
-  .contact-email-link {
-      font-size: 1.2rem;
-  }
-  
-  /* Ajuste para que las columnas de detalle POS se apilen */
-  .pos-project-detail .pos-columns {
-      align-items: flex-start;
-  }
-  
-  .pos-project-detail .pos-columns > div {
-      width: 100%;
   }
 
 }
