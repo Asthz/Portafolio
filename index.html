@@ -1,29 +1,34 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Portafolio · Jacob Alexander Samudio Martínez</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portafolio · Jacob Alexander Samudio Martínez</title>
+  <meta name="description" content="Portafolio académico de Jacob Samudio, estudiante de Ingeniería en Sistemas. Desarrollo de software, redes, bases de datos y servidores.">
+
   <link rel="stylesheet" href="styles.css?v=final-pro">
 
   <!-- ICONOS -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
 
+</head>
 <body>
 
 <header class="header">
   <div class="header-left">
-    <h1>JACOB SAMUDIO</h1>
+    <h1>Jacob Samudio</h1>
     <p class="header-subtitle">PORTAFOLIO ACADÉMICO · INGENIERÍA EN SISTEMAS</p>
   </div>
-  <nav class="header-nav">
-    <a href="#sobre-mi">SOBRE MÍ</a>
-    <a href="#resumen">RESUMEN</a>
-    <a href="#proyectos">PROYECTOS</a>
-    <a href="#detalle-pos">SISTEMA POS</a>
-    <a href="#habilidades">HABILIDADES</a>
-    <a href="#contacto">CONTACTO</a>
+
+  <nav class="header-nav" aria-label="Menú principal">
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#resumen">Resumen</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#detalle-pos">Sistema POS</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#contacto">Contacto</a>
   </nav>
 </header>
 
@@ -31,71 +36,74 @@
 
 <!-- SOBRE MI -->
 <section id="sobre-mi" class="panel">
-  <h2>01 · SOBRE MÍ</h2>
+  <h2>01 · Sobre mí</h2>
+
   <p>
     Estudiante de Ingeniería en Sistemas con enfoque en desarrollo de software,
-    redes de computadoras, bases de datos y soluciones tecnológicas empresariales.
+    redes de computadoras, bases de datos y soluciones empresariales.
     He desarrollado proyectos académicos que integran programación,
-    infraestructura, estructura de datos y automatización de procesos reales.
+    infraestructura, estructuras de datos y automatización de procesos reales.
   </p>
+
   <p>
     Poseo experiencia desarrollando aplicaciones con Python y C,
-    implementando interfaces gráficas con Tkinter,
-    diseñando bases de datos con MySQL
-    y configurando servidores Windows Server.
+    interfaces gráficas con Tkinter,
+    bases de datos MySQL
+    y configuración de servidores Windows Server.
   </p>
+
   <p>
-    Este portafolio demuestra pensamiento lógico,
-    capacidad de análisis estructurado y dominio técnico
+    Este portafolio refleja pensamiento lógico,
+    análisis estructurado y dominio técnico
     para construir sistemas funcionales desde la lógica hasta la implementación.
   </p>
 </section>
 
 <!-- RESUMEN -->
 <section id="resumen" class="panel panel-outline">
-  <h2>02 · RESUMEN DEL CURSO</h2>
+  <h2>02 · Resumen del curso</h2>
 
   <div class="summary-grid">
 
     <div class="summary-block">
-      <h3>PROGRAMACIÓN</h3>
+      <h3>Programación</h3>
       <p>
-        Desarrollo de algoritmos con Python y C empleando estructuras condicionales,
-        ciclos, funciones, depuración de errores,
-        control de flujo y validación de datos.
-        Construcción de aplicaciones gráficas con Tkinter.
+        Desarrollo de algoritmos en Python y C usando condicionales,
+        bucles, funciones,
+        validación de datos y depuración.
+        Desarrollo de aplicaciones gráficas con Tkinter.
       </p>
     </div>
 
     <div class="summary-block">
-      <h3>BASES DE DATOS</h3>
+      <h3>Bases de datos</h3>
       <p>
         Diseño de bases de datos relacionales,
         consultas SQL,
-        modelado entidad-relación,
-        normalización y operaciones CRUD conectadas a aplicaciones Python.
+        modelo entidad-relación,
+        normalización y operaciones CRUD conectadas a Python.
       </p>
     </div>
 
     <div class="summary-block">
-      <h3>SERVIDORES</h3>
+      <h3>Servidores</h3>
       <p>
         Instalación de Windows Server,
-        configuración de usuarios,
+        gestión de usuarios,
         carpetas compartidas,
-        servicios FTP,
-        respaldos y administración básica.
+        configuración FTP
+        y respaldos.
       </p>
     </div>
 
     <div class="summary-block">
-      <h3>REDES</h3>
+      <h3>Redes</h3>
       <p>
         Diseño de redes LAN,
-        simulación en Cisco Packet Tracer,
+        simulación en Packet Tracer,
         topologías,
         comunicación cliente-servidor
-        y análisis de infraestructura.
+        y análisis de red.
       </p>
     </div>
 
@@ -104,98 +112,93 @@
 
 <!-- PROYECTOS -->
 <section id="proyectos" class="panel panel-dark">
-  <h2>03 · PROYECTOS PRINCIPALES</h2>
+  <h2>03 · Proyectos principales</h2>
 
   <div class="projects-grid">
 
     <article class="project-card">
-      <img class="project-img" src="imagenes/taller.jpg">
-      <span class="project-tag">SISTEMA EMPRESARIAL</span>
-      <h3>TALLER PRÁCTICO 1 · SISTEMA DE ALQUILER</h3>
+      <img class="project-img" src="imagenes/taller.jpg" alt="Sistema de alquiler">
+      <span class="project-tag">Sistema Empresarial</span>
+
+      <h3>Taller práctico · Sistema de alquiler</h3>
+
       <p>
-        Desarrollo de un sistema empresarial de alquiler de equipos
-        integrando algoritmos de búsqueda secuencial,
-        estructura de datos tipo pila,
-        diseño de base de datos
-        y prototipo funcional en Python.
+        Sistema de alquiler de equipos que integra
+        búsqueda secuencial,
+        pila como estructura de datos
+        y base de datos relacional en Python.
       </p>
-      <p>
-        El sistema administra clientes,
-        equipos y alquileres
-        con una estructura lógica organizada.
-      </p>
-      <a class="btn" target="_blank"
+
+      <a class="btn" target="_blank" rel="noopener"
          href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Taller%20Pr%C3%A1ctico1_final.pdf&embedded=true">
-        VER DOCUMENTACIÓN
+        Ver documentación
       </a>
     </article>
 
     <article class="project-card">
-      <img class="project-img" src="imagenes/algoritmos.jpg">
-      <span class="project-tag">PROGRAMACIÓN</span>
-      <h3>EJERCICIO PRÁCTICO · LENGUAJE C</h3>
+      <img class="project-img" src="imagenes/algoritmos.jpg" alt="Ejercicios en C">
+      <span class="project-tag">Programación</span>
+
+      <h3>Lenguaje C · Ejercicios</h3>
+
       <p>
-        Desarrollo de ejercicios algorítmicos
-        usando estructuras condicionales,
-        ciclos, validación de datos
-        y lógica matemática.
+        Ejercicios enfocados en cálculo matemático,
+        estructuras de control
+        y validación de datos.
       </p>
-      <p>
-        Incluye cálculos de notas,
-        sueldos
-        y operaciones numéricas.
-      </p>
-      <a class="btn" target="_blank"
+
+      <a class="btn" target="_blank" rel="noopener"
          href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Ejercicio%20practico%201.pdf&embedded=true">
-        VER PRÁCTICA
+        Ver prácticas
       </a>
     </article>
 
     <article class="project-card">
-      <img class="project-img" src="imagenes/server.jpg">
-      <span class="project-tag">SERVIDORES</span>
-      <h3>EJERCICIO PRÁCTICO · WINDOWS SERVER</h3>
+      <img class="project-img" src="imagenes/server.jpg" alt="Windows Server">
+      <span class="project-tag">Servidores</span>
+
+      <h3>Windows Server</h3>
+
       <p>
-        Instalación y configuración de Windows Server
-        bajo un entorno virtualizado.
+        Configuración de entorno virtualizado con
+        usuarios, FTP
+        y accesos remotos.
       </p>
-      <p>
-        Implementación de FTP,
-        accesos remotos
-        y usuarios.
-      </p>
-      <a class="btn" target="_blank"
+
+      <a class="btn" target="_blank" rel="noopener"
          href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Ejercicio_Pr%C3%A1ctico_2.pdf&embedded=true">
-        VER DOCUMENTACIÓN
+        Ver documentación
       </a>
     </article>
 
     <article class="project-card">
-      <img class="project-img" src="imagenes/datos.jpg">
-      <span class="project-tag">INFRAESTRUCTURA</span>
-      <h3>LABORATORIO · SERVIDOR DE DATOS</h3>
+      <img class="project-img" src="imagenes/datos.jpg" alt="Servidor de datos">
+      <span class="project-tag">Infraestructura</span>
+
+      <h3>Servidor de datos</h3>
+
       <p>
         Implementación de estructura de respaldo
-        con control de acceso.
+        y control de acceso.
       </p>
-      <p>
-        Apoyo a infraestructura general.
-      </p>
-      <a class="btn" target="_blank"
+
+      <a class="btn" target="_blank" rel="noopener"
          href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Laboratorio%20Pr%C3%A1ctico%201%20(Version%20final)%20(1).pdf&embedded=true">
-        VER LABORATORIO
+        Ver laboratorio
       </a>
     </article>
 
     <article class="project-card">
-      <img class="project-img" src="imagenes/examen.jpg">
-      <span class="project-tag">EVALUACIÓN</span>
-      <h3>PARCIAL · LÓGICA</h3>
-      <p>Evaluación aplicada a estructuras lógicas.</p>
-      <p>Demuestra análisis y criterio algorítmico.</p>
-      <a class="btn" target="_blank"
+      <img class="project-img" src="imagenes/examen.jpg" alt="Examen de lógica">
+      <span class="project-tag">Evaluación</span>
+
+      <h3>Parcial de lógica</h3>
+
+      <p>Evaluación sobre razonamiento algorítmico.</p>
+
+      <a class="btn" target="_blank" rel="noopener"
          href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Parcial%201_jacobsamudio.pdf&embedded=true">
-        VER EXAMEN
+        Ver examen
       </a>
     </article>
 
@@ -204,24 +207,20 @@
 
 <!-- POS -->
 <section id="detalle-pos" class="panel panel-highlight">
-  <h2>04 · SISTEMA POS · "CHINOS CAFÉ"</h2>
-  <img src="imagenes/pos.jpg" class="project-img">
+  <h2>04 · Sistema POS · “Chinos Café”</h2>
+
+  <img src="imagenes/pos.jpg" class="project-img" alt="Sistema POS">
 
   <p>
-    Sistema de Punto de Venta desarrollado en Python con interfaz gráfica Tkinter,
-    conectado a una base de datos MySQL para la gestión real de ventas,
-    inventarios y facturación.
-  </p>
-
-  <p>
-    Diseñado bajo un entorno empresarial,
-    enfocado en automatizar procesos comerciales
-    con organización estructurada de datos.
+    Punto de venta desarrollado en Python con interfaz gráfica Tkinter,
+    integrado con MySQL
+    para ventas, inventarios y facturación.
   </p>
 
   <div class="pos-columns">
+
     <div>
-      <h4>MÓDULOS</h4>
+      <h4>Módulos</h4>
       <ul>
         <li>Inventario</li>
         <li>Ventas</li>
@@ -231,7 +230,7 @@
     </div>
 
     <div>
-      <h4>TECNOLOGÍA</h4>
+      <h4>Tecnología</h4>
       <ul>
         <li>Python</li>
         <li>Tkinter</li>
@@ -239,53 +238,38 @@
         <li>Red local</li>
       </ul>
     </div>
+
   </div>
 
-  <a class="btn btn-secondary" target="_blank"
+  <a class="btn btn-secondary" target="_blank" rel="noopener"
      href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Examen%20Parcial2(entrega).pdf&embedded=true">
-    VER DOCUMENTACIÓN COMPLETA
+    Ver documentación completa
   </a>
 </section>
 
 <!-- HABILIDADES -->
 <section id="habilidades" class="panel">
-  <h2>05 · HABILIDADES TÉCNICAS</h2>
+  <h2>05 · Habilidades técnicas</h2>
+
   <div class="skills-grid">
 
     <div class="skill"><i class="fa-brands fa-python"></i> Python</div>
     <div class="skill"><i class="fa-solid fa-code"></i> Lenguaje C</div>
-    <div class="skill"><i class="fa-solid fa-gears"></i> Programación Lógica</div>
-    <div class="skill"><i class="fa-solid fa-bug"></i> Depuración</div>
     <div class="skill"><i class="fa-solid fa-desktop"></i> Tkinter</div>
-
     <div class="skill"><i class="fa-solid fa-database"></i> MySQL</div>
-    <div class="skill"><i class="fa-solid fa-filter"></i> SQL</div>
-    <div class="skill"><i class="fa-solid fa-table"></i> CRUD</div>
-
     <div class="skill"><i class="fa-brands fa-windows"></i> Windows Server</div>
-    <div class="skill"><i class="fa-solid fa-folder"></i> Carpetas Compartidas</div>
-    <div class="skill"><i class="fa-solid fa-server"></i> Administración Básica</div>
-    <div class="skill"><i class="fa-solid fa-right-left"></i> FTP</div>
-
     <div class="skill"><i class="fa-solid fa-network-wired"></i> Redes LAN</div>
-    <div class="skill"><i class="fa-solid fa-diagram-project"></i> Packet Tracer</div>
-    <div class="skill"><i class="fa-solid fa-circle-nodes"></i> Topologías</div>
-
-    <div class="skill"><i class="fa-solid fa-cash-register"></i> Sistemas POS</div>
-    <div class="skill"><i class="fa-solid fa-box"></i> Inventarios</div>
-    <div class="skill"><i class="fa-solid fa-file-invoice"></i> Facturación</div>
-
-    <div class="skill"><i class="fa-solid fa-brain"></i> Pensamiento Analítico</div>
-    <div class="skill"><i class="fa-solid fa-lightbulb"></i> Resolución de Problemas</div>
-    <div class="skill"><i class="fa-solid fa-users"></i> Trabajo en Equipo</div>
-    <div class="skill"><i class="fa-solid fa-clock"></i> Gestión del Tiempo</div>
+    <div class="skill"><i class="fa-solid fa-cash-register"></i> POS</div>
+    <div class="skill"><i class="fa-solid fa-brain"></i> Pensamiento analítico</div>
+    <div class="skill"><i class="fa-solid fa-lightbulb"></i> Resolución de problemas</div>
+    <div class="skill"><i class="fa-solid fa-users"></i> Trabajo en equipo</div>
 
   </div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto" class="panel panel-outline">
-  <h2>06 · CONTACTO</h2>
+  <h2>06 · Contacto</h2>
   <a class="contact-email" href="mailto:jacob.samudio@utp.ac.pa">
     jacob.samudio@utp.ac.pa
   </a>
