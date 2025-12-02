@@ -1,959 +1,309 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Jacob Samudio · Ingeniero en Sistemas & Desarrollador</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portafolio de Jacob Alexander Samudio Martínez, estudiante de Ingeniería en Sistemas. Proyectos en Python, C, MySQL y administración de servidores Windows.">
-  <meta name="author" content="Jacob Alexander Samudio Martínez">
-
-  <!-- Usando Inter como tipografía principal -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  
-  <!-- ICONOS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-/* ========================================================
-    ESTILOS CSS - ADAPTADOS A LA ESTRUCTURA HTML "PRO"
-    ========================================================
-*/
-
-/* RESET PROFESIONAL */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* VARIABLES */
-:root {
-  --bg: #050308;
-  --bg-alt: #090712;
-  --bg-strong: #050307;
-  --fg: #f4f4f4;
-  --muted: #b3b3b3;
-  --accent: #c41e3a; /* Rojo oscuro profesional */
-  --accent-soft: #8b1b32;
-  --border: #2a242e;
-  --radius: 3px;
-  --shadow: 0 8px 18px rgba(0,0,0,0.45);
-}
-
-/* BASE GLOBAL */
-body {
-  background: linear-gradient(180deg, #050308, #07040b);
-  color: var(--fg);
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.7;
-  scroll-behavior: smooth;
-}
-
-/* Contenedor principal para centrar el contenido en pantallas grandes */
-.site-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* CABECERA */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 2.6rem 3rem 1.5rem;
-  border-bottom: 2px solid var(--border);
-  background: rgba(5,3,7,0.95);
-  backdrop-filter: blur(6px);
-  width: 100%; 
-}
-
-.header-branding .logo-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.header-branding .logo-name {
-  font-size: 2.4rem;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
-  font-weight: 900;
-  margin-bottom: 0;
-}
-
-.header-subtitle {
-  margin-top: 0.25rem;
-  color: var(--muted);
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-}
-
-/* NAVEGACION */
-.header-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  align-items: flex-end;
-}
-
-.header-nav a {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.72rem;
-  border: 1px solid var(--border);
-  padding: 0.45rem 0.8rem;
-  color: var(--fg);
-  letter-spacing: 0.09em;
-  transition: all 0.25s ease;
-  border-radius: var(--radius);
-}
-
-.header-nav a:hover {
-  background: var(--accent-soft);
-  border-color: var(--accent);
-  box-shadow: 0 0 8px rgba(196,30,58,.25);
-}
-
-/* Estilo para el botón de contacto en la navegación (CTA) */
-.header-nav .btn-nav-cta {
-    background: var(--accent);
-    border-color: var(--accent);
-    padding: 0.6rem 1.1rem;
-    font-weight: 700;
-}
-
-.header-nav .btn-nav-cta:hover {
-    background: linear-gradient(145deg,#c41e3a,#ff2c4d);
-    border-color: #ff2c4d;
-    box-shadow: 0 0 12px rgba(255,44,77,.5);
-    transform: translateY(-1px);
-}
-
-/* Panel Base */
-.panel {
-  padding: 3rem;
-  border-bottom: 1px solid var(--border);
-}
-
-/* Modificadores de Panel */
-.panel-dark { background: var(--bg-alt); }
-
-.panel-outline {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.panel-highlight {
-  background: linear-gradient(145deg, #0b050c, #050308);
-  border-top: 2px solid var(--accent-soft);
-  border-bottom: 2px solid var(--accent-soft);
-}
-
-/* TITULOS (H2) */
-.panel h2 {
-  font-size: 1rem;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  border-left: 4px solid var(--accent);
-  padding-left: 1rem;
-  margin-bottom: 1.6rem;
-  font-weight: 700;
-}
-
-/* Estilos específicos de la sección HERO */
-.hero-section {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-}
-.hero-section .tagline {
-    font-size: 1.5rem;
-    color: var(--fg);
-    margin-bottom: 2rem;
-    font-weight: 300;
-    letter-spacing: 0.05em;
-}
-
-/* Descripciones de Sección */
-.section-description {
-    color: var(--fg);
-    font-size: 1.1rem;
-    margin-bottom: 2rem !important;
-    font-weight: 300;
-}
-
-/* TEXTO */
-.panel p {
-  margin-bottom: 0.9rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-/* RESUMEN */
-.summary-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.1rem;
-  margin-top: 1.2rem;
-}
-
-.summary-block {
-  padding: 1.15rem;
-  border: 1px solid var(--border);
-  background: var(--bg-alt);
-  transition: transform .25s ease, box-shadow .25s ease;
-  border-radius: var(--radius);
-}
-
-.summary-block h3 {
-    font-size: 1.1rem;
-    color: var(--accent);
-    margin-bottom: 0.6rem;
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-}
-
-.summary-block:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow);
-  border-color: var(--accent-soft);
-}
-
-/* PROYECTOS */
-.projects-section .section-description {
-    margin-top: -1rem;
-    margin-bottom: 2rem;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.4rem;
-  margin-top: 1.5rem;
-}
-
-.project-card {
-  border: 2px solid var(--border);
-  background: var(--bg-strong);
-  padding: 1.3rem;
-  position: relative;
-  transition: all 0.3s ease;
-  border-radius: 8px; 
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.project-card h3 {
-    margin: 0.3rem 0 0.8rem;
-    font-size: 1.25rem;
-    color: var(--fg);
-    min-height: 3rem; /* Asegurar espacio para títulos largos */
-}
-
-.project-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow);
-}
-
-.project-tag {
-  display: inline-block;
-  font-size: 0.65rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent-soft);
-  font-weight: 600;
-}
-
-/* IMÁGENES PROYECTOS */
-.project-image-container {
-    overflow: hidden;
-    margin: 0.8rem 0;
-    border-radius: var(--radius);
-}
-.project-img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  filter: grayscale(85%) contrast(1.1);
-  border: 1px solid var(--border);
-  transition: .35s ease;
-}
-
-.project-card:hover .project-img {
-  filter: grayscale(25%) contrast(1.25);
-  transform: scale(1.08); 
-}
-
-/* Estilos para el bloque de proyectos adicionales (aside) */
-.more-projects-block {
-    grid-column: 1 / -1; 
-    background: var(--bg-alt);
-    padding: 1.5rem;
-    border: 1px dashed var(--border);
-    border-radius: 8px;
-}
-.more-projects-block h4 {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--accent-soft);
-    margin-bottom: 0.8rem;
-}
-.more-projects-block ul {
-    list-style: none;
-    padding-left: 0;
-}
-.more-projects-block li {
-    font-size: 0.9rem;
-    color: var(--muted);
-    margin-bottom: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px dotted #1a151f;
-    padding-bottom: 0.3rem;
-}
-.more-projects-block li a {
-    color: var(--accent);
-    margin-left: 0.5rem;
-}
-
-
-/* BOTONES */
-.btn,
-.btn-secondary,
-.btn-doc,
-.btn-primary-cta {
-  display: inline-block;
-  margin-top: 0.9rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  text-decoration: none;
-  border: 1px solid var(--accent);
-  color: var(--fg);
-  background: transparent;
-  transition: all 0.25s ease;
-  border-radius: var(--radius);
-  text-align: center;
-}
-
-/* Estilo para el botón principal CTA en la sección 'Sobre Mí' */
-.btn-primary-cta {
-    background: var(--accent);
-    border-color: var(--accent);
-    padding: 0.75rem 1.5rem;
-    font-size: 0.8rem;
-    margin-top: 1.5rem;
-    font-weight: 600;
-}
-.btn-primary-cta:hover {
-    background: linear-gradient(145deg,#ff2c4d,#c41e3a);
-    box-shadow: 0 0 15px rgba(255,44,77,.4);
-}
-
-
-/* Estilo base para los botones de documentación en proyectos */
-.btn-doc {
-  background: linear-gradient(145deg,#8b1b32,#c41e3a);
-  border: none;
-  font-weight: 600;
-  width: 100%;
-}
-
-.btn-doc:hover {
-  background: linear-gradient(145deg,#c41e3a,#ff2c4d);
-}
-
-.btn-secondary {
-  border-color: var(--accent-soft);
-}
-
-.btn-secondary:hover {
-  background: var(--accent-soft);
-}
-
-/* POS DETALLE */
-.pos-project-detail {
-    text-align: center;
-}
-.pos-project-detail .project-main-image {
-    margin: 2rem auto;
-    max-width: 800px;
-}
-.pos-project-detail .project-img {
-    height: auto;
-    max-height: 400px;
-    filter: none;
-    border-radius: 8px;
-}
-.pos-project-detail figcaption {
-    font-size: 0.8rem;
-    color: var(--accent-soft);
-    margin-top: 0.5rem;
-    letter-spacing: 0.05em;
-}
-
-.pos-content-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    text-align: left;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-}
-
-.pos-description {
-    padding-right: 1.5rem;
-    border-right: 1px solid var(--border);
-}
-
-.pos-details {
-    background: var(--bg-strong);
-    padding: 1rem;
-    border: 1px solid var(--accent-soft);
-    border-radius: var(--radius);
-}
-
-.pos-columns {
-  display: flex; 
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.pos-columns h4 {
-  font-size: 0.72rem;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: var(--accent); 
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.pos-columns ul {
-    list-style: none;
-    padding: 0;
-}
-.pos-columns li {
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
-}
-
-.btn-full-width {
-    width: 100%;
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 0.85rem;
-}
-
-
-/* HABILIDADES */
-.skills-section h2 {
-    margin-bottom: 0.5rem;
-}
-.skills-section .section-description {
-    margin-bottom: 2rem;
-}
-
-.skills-category {
-    margin-bottom: 2rem;
-}
-
-.skills-category h3 {
-    font-size: 1.2rem;
-    color: var(--fg);
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 0.3rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.skills-category h3 i {
-    color: var(--accent);
-}
-
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-.skill {
-  display: flex;
-  gap: 0.45rem;
-  align-items: center;
-  border: 1px solid var(--border);
-  background: var(--bg-strong);
-  padding: 0.4rem 0.85rem;
-  font-size: 0.75rem;
-  transition: all .2s ease;
-  border-radius: var(--radius);
-}
-
-.skill:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-  box-shadow: 0 4px 10px rgba(196,30,58,.25);
-}
-
-.skill i {
-  color: var(--accent);
-}
-
-/* CONTACTO */
-.contact-section {
-    text-align: center;
-}
-.contact-email-link { 
-  color: var(--fg);
-  display: inline-block;
-  font-size: 1.5rem;
-  border-bottom: 1px dashed var(--accent-soft);
-  text-decoration: none;
-  transition: .2s;
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.contact-email-link:hover {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
-}
-
-.social-links {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-.social-links a {
-    color: var(--muted);
-    transition: color 0.2s ease;
-}
-.social-links a:hover {
-    color: var(--accent);
-}
-
-
-/* FOOTER */
-.footer {
-  padding: 1.2rem;
-  color: var(--muted);
-  text-align: center;
-  border-top: 1px solid var(--border);
-  background: #050308;
-  font-size: 0.8rem;
-  line-height: 1.4;
-}
-.footer-credits {
-    margin-top: 0.5rem;
-    font-size: 0.7rem;
-    color: #555;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-    /* Ajustes para tabletas */
-    .pos-content-grid {
-        grid-template-columns: 1fr;
-    }
-    .pos-description {
-        border-right: none;
-        padding-right: 0;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid var(--border);
-    }
-    .pos-details {
-        text-align: left;
-    }
-    .pos-columns {
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 1rem;
-    }
-}
-
-@media (max-width:768px) {
-
-  .header {
-    padding: 1.6rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .header-nav {
-      width: 100%;
-      margin-top: 1rem;
-      justify-content: space-between;
-      gap: 0.5rem;
-  }
-
-  .header-nav a {
-      flex-grow: 1; 
-      text-align: center;
-      padding: 0.4rem 0.6rem;
-  }
-  
-  .header-branding .logo-name {
-    font-size: 2rem;
-  }
-
-  .panel {
-    padding: 1.6rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .summary-grid {
-      grid-template-columns: 1fr;
-  }
-  
-  .pos-columns {
-      flex-direction: column;
-      gap: 0.8rem;
-  }
-  
-  .contact-email-link {
-      font-size: 1.2rem;
-  }
-
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Samudio | Desarrollador de Software y Arquitecto de Datos</title>
+    <!-- Enlace a Google Font 'Inter' -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Enlace a Font Awesome para Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- ENLACE AL ARCHIVO CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- Contenedor principal para limitar el ancho en desktop -->
-<div class="site-wrapper"> 
+    <div class="site-wrapper">
 
-  <header class="header">
-    <div class="header-branding">
-      <a href="#main-content" class="logo-link">
-        <h1 class="logo-name">JACOB SAMUDIO</h1>
-        <span class="header-subtitle">INGENIERÍA EN SISTEMAS | DESARROLLADOR</span>
-      </a>
+        <!-- CABECERA Y NAVEGACIÓN -->
+        <header class="header">
+            <div class="header-branding">
+                <a href="#inicio" class="logo-link">
+                    <h1 class="logo-name">JACOB SAMUDIO</h1>
+                    <p class="header-subtitle">SOFTWARE & DATA ARCHITECT</p>
+                </a>
+            </div>
+            <nav class="header-nav">
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#contacto" class="btn-nav-cta">Contacto</a>
+            </nav>
+        </header>
+
+        <!-- SECCIÓN 1: INICIO / SOBRE MÍ (HERO) -->
+        <section id="inicio" class="panel hero-section">
+            <p class="tagline">Hola, soy Jacob. Transformo ideas complejas en soluciones de software robustas y escalables.</p>
+
+            <h2 id="sobre-mi">Sobre Mí</h2>
+            <p class="section-description">
+                Desarrollador Full Stack con 10 años de experiencia enfocado en arquitectura de microservicios y optimización de bases de datos. Mi pasión es construir sistemas que no solo funcionen hoy, sino que puedan crecer con el negocio.
+            </p>
+
+            <p>
+                Desde mis inicios en desarrollo web, siempre he buscado los desafíos que requieren una comprensión profunda de cómo interactúan el *front-end* y el *back-end*. En los últimos 5 años, me he especializado en la nube y en patrones de diseño que garantizan alta disponibilidad y rendimiento.
+            </p>
+            <p>
+                Colaboro estrechamente con equipos multidisciplinarios para definir la hoja de ruta técnica y garantizar que el producto final cumpla con los estándares más altos de calidad y seguridad.
+            </p>
+
+            <a href="#contacto" class="btn-primary-cta">Hablemos de tu proyecto</a>
+        </section>
+
+        <!-- SECCIÓN 2: RESUMEN DE ÁREAS CLAVE -->
+        <section class="panel panel-dark">
+            <h2>Mi Enfoque</h2>
+            <div class="summary-grid">
+                
+                <div class="summary-block">
+                    <h3><i class="fa-solid fa-code"></i> Desarrollo Robusto</h3>
+                    <p>Escribo código limpio, testeable y mantenible. Especialista en patrones MVC y Hexagonal Architecture.</p>
+                </div>
+                
+                <div class="summary-block">
+                    <h3><i class="fa-solid fa-cloud"></i> Arquitectura en la Nube</h3>
+                    <p>Diseño e implemento soluciones escalables usando AWS y Azure, enfocándome en Serverless y CI/CD.</p>
+                </div>
+
+                <div class="summary-block">
+                    <h3><i class="fa-solid fa-database"></i> Gestión de Datos</h3>
+                    <p>Optimización de consultas SQL/NoSQL y modelado de datos para garantizar la integridad y velocidad de la información.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: PROYECTOS -->
+        <section id="proyectos" class="panel panel-highlight">
+            <h2>Proyectos Destacados</h2>
+            <p class="section-description">
+                Una selección de mis trabajos más representativos en desarrollo de software y análisis de sistemas.
+            </p>
+
+            <div class="projects-grid">
+                
+                <!-- PROYECTO 1: Sistema POS Avanzado (Usando pos.jpg) -->
+                <article class="project-card">
+                    <span class="project-tag">Full Stack | IoT</span>
+                    <h3>Sistema POS Multicanal</h3>
+                    <div class="project-image-container">
+                        <img src="pos.jpg" alt="Captura de pantalla del Sistema POS Multicanal" class="project-img">
+                    </div>
+                    <p>
+                        Desarrollo de un Punto de Venta (POS) integrado con inventario en tiempo real y módulo de fidelización de clientes. Incluyó integración con APIs de pago.
+                    </p>
+                    <a href="#detalle-pos" class="btn-doc">Ver Detalles del POS</a>
+                </article>
+
+                <!-- PROYECTO 2: Plataforma de Algoritmos (Usando algoritmos.jpg) -->
+                <article class="project-card">
+                    <span class="project-tag">Back-end | Optimización</span>
+                    <h3>Plataforma de Trading Algorítmico</h3>
+                    <div class="project-image-container">
+                        <img src="algoritmos.jpg" alt="Gráfico de una plataforma de trading algorítmico" class="project-img">
+                    </div>
+                    <p>
+                        Creación de un motor de ejecución de algoritmos de alta frecuencia con baja latencia en Node.js y Redis.
+                    </p>
+                    <a href="#" class="btn-secondary">Repositorio (Privado)</a>
+                </article>
+                
+                <!-- PROYECTO 3: Migración de Servidor (Usando server.jpg) -->
+                <article class="project-card">
+                    <span class="project-tag">DevOps | Infraestructura</span>
+                    <h3>Migración de Servidores a Cloud</h3>
+                    <div class="project-image-container">
+                        <img src="server.jpg" alt="Iconos de migración de centro de datos a la nube" class="project-img">
+                    </div>
+                    <p>
+                        Planificación y ejecución de la migración de un *datacenter* on-premise a una arquitectura Serverless en Azure Functions.
+                    </p>
+                    <a href="#" class="btn-secondary">Ver Presentación</a>
+                </article>
+                
+                <!-- PROYECTO 4: Sistema de Evaluación (Usando examen.jpg) -->
+                <article class="project-card">
+                    <span class="project-tag">E-Learning | Testing</span>
+                    <h3>Sistema de Evaluación Educativa</h3>
+                    <div class="project-image-container">
+                        <img src="examen.jpg" alt="Interfaz de un examen digital en una tableta" class="project-img">
+                    </div>
+                    <p>
+                        Desarrollo de una aplicación para toma de exámenes online con monitoreo de fraude y calificación automatizada.
+                    </p>
+                    <a href="#" class="btn-secondary">Leer Caso de Estudio</a>
+                </article>
+
+                <!-- PROYECTO 5: Taller de Código (Usando taller.jpg) -->
+                <article class="project-card">
+                    <span class="project-tag">Comunidad | Frontend</span>
+                    <h3>Taller de Código Interactivo</h3>
+                    <div class="project-image-container">
+                        <img src="taller.jpg" alt="Laptop mostrando código y una taza de café" class="project-img">
+                    </div>
+                    <p>
+                        Diseño e implementación de un entorno interactivo para impartir talleres de programación web a principiantes.
+                    </p>
+                    <a href="#" class="btn-secondary">Visitar Demo</a>
+                </article>
+
+                <!-- PROYECTO 6: Análisis de Datos (Usando datos.jpg) -->
+                <article class="project-card">
+                    <span class="project-tag">Data Science | Backend</span>
+                    <h3>Pipeline de Análisis de Datos</h3>
+                    <div class="project-image-container">
+                        <img src="datos.jpg" alt="Visualización de datos y gráficos" class="project-img">
+                    </div>
+                    <p>
+                        Implementación de un ETL (Extract, Transform, Load) para procesar millones de registros diarios y generar reportes de BI.
+                    </p>
+                    <a href="#" class="btn-secondary">Informe Técnico</a>
+                </article>
+                
+                <!-- Bloque de proyectos adicionales -->
+                <aside class="more-projects-block">
+                    <h4>Proyectos Adicionales y Contribuciones</h4>
+                    <ul>
+                        <li>Sistema de Monitoreo de Redes <a href="#">Ver</a></li>
+                        <li>Microservicio de Notificaciones SMS <a href="#">Ver</a></li>
+                        <li>Contribución a Librería Open Source (Python) <a href="#">GitHub</a></li>
+                    </ul>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: DETALLE DEL PROYECTO POS (Ancla de detalle-pos) -->
+        <section id="detalle-pos" class="panel panel-dark pos-project-detail">
+            <h2>Detalle: Sistema POS Multicanal</h2>
+            <p class="section-description">
+                Solución clave diseñada para un cliente minorista con múltiples ubicaciones, requiriendo alta disponibilidad y una experiencia de usuario fluida.
+            </p>
+
+            <figure class="project-main-image">
+                <img src="pos.jpg" alt="Vista ampliada del panel principal del Sistema POS" class="project-img">
+                <figcaption>Panel principal del sistema POS optimizado para pantallas táctiles.</figcaption>
+            </figure>
+
+            <div class="pos-content-grid">
+                
+                <div class="pos-description">
+                    <p>
+                        El sistema se construyó utilizando React para el *front-end* (asegurando una UX rápida y responsive en terminales táctiles) y Python (Django Rest Framework) para el *back-end*, lo que permitió un desarrollo ágil y seguro de las APIs. 
+                    </p>
+                    <p>
+                        Uno de los desafíos principales fue la sincronización de inventario. Implementamos un patrón de Event Sourcing con Kafka para asegurar que los cambios de stock fueran consistentes en todas las sucursales en milisegundos.
+                    </p>
+                    <p>
+                        Además, el módulo de reportes utiliza un almacén de datos separado (Redshift) para evitar la latencia en las operaciones transaccionales. Esto resultó en una mejora del 40% en la velocidad de procesamiento de transacciones diarias.
+                    </p>
+                    <a href="#proyectos" class="btn-secondary">Volver a Proyectos</a>
+                </div>
+
+                <div class="pos-details">
+                    <div class="pos-columns">
+                        <div>
+                            <h4><i class="fa-solid fa-laptop-code"></i> Tecnologías Clave</h4>
+                            <ul>
+                                <li>Frontend: React, Redux, Tailwind CSS</li>
+                                <li>Backend: Python (Django Rest Framework)</li>
+                                <li>Base de Datos: PostgreSQL, Redis</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4><i class="fa-solid fa-wrench"></i> Arquitectura</h4>
+                            <ul>
+                                <li>Cloud: AWS (ECS, S3, RDS)</li>
+                                <li>Mensajería: Apache Kafka</li>
+                                <li>Pruebas: Jest, Pytest</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECCIÓN 5: HABILIDADES TÉCNICAS -->
+        <section id="habilidades" class="panel">
+            <h2>Habilidades Técnicas</h2>
+            <p class="section-description">
+                Un resumen de las tecnologías y herramientas con las que trabajo diariamente.
+            </p>
+
+            <div class="skills-category">
+                <h3><i class="fa-solid fa-terminal"></i> Desarrollo Back-end y APIs</h3>
+                <div class="skills-grid">
+                    <div class="skill"><i class="fa-solid fa-check"></i> Python</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Node.js (Express)</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Java (Spring Boot)</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Go</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> REST/GraphQL</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Microservicios</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3><i class="fa-solid fa-globe"></i> Front-end y UX</h3>
+                <div class="skills-grid">
+                    <div class="skill"><i class="fa-solid fa-check"></i> React</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> TypeScript</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> HTML5 & CSS3</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Tailwind CSS</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Angular</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Responsive Design</div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3><i class="fa-solid fa-gear"></i> DevOps y Cloud</h3>
+                <div class="skills-grid">
+                    <div class="skill"><i class="fa-solid fa-check"></i> AWS (EC2, Lambda, S3)</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Azure Functions</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Docker & Kubernetes</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Terraform</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> CI/CD (GitLab, GitHub Actions)</div>
+                </div>
+            </div>
+            
+            <div class="skills-category">
+                <h3><i class="fa-solid fa-database"></i> Bases de Datos y Almacenamiento</h3>
+                <div class="skills-grid">
+                    <div class="skill"><i class="fa-solid fa-check"></i> PostgreSQL</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> MongoDB</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Redis</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> Kafka (Event Sourcing)</div>
+                    <div class="skill"><i class="fa-solid fa-check"></i> ETL/Pipelines</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: CONTACTO -->
+        <section id="contacto" class="panel panel-highlight contact-section">
+            <h2>Hablemos</h2>
+            <p class="section-description">
+                Estoy disponible para nuevos proyectos a gran escala y roles de consultoría arquitectónica.
+            </p>
+            
+            <a href="mailto:jacob.samudio.dev@email.com" class="contact-email-link">
+                <i class="fa-solid fa-envelope"></i> jacob.samudio.dev@email.com
+            </a>
+
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-twitter fa-2x"></i></a>
+            </div>
+            
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <p>&copy; 2024 Jacob Samudio. Todos los derechos reservados.</p>
+            <p class="footer-credits">Diseño y desarrollo por Jacob Samudio.</p>
+        </footer>
+
     </div>
-    
-    <nav class="header-nav" aria-label="Navegación Principal del Portafolio">
-      <a href="#sobre-mi">SOBRE MÍ</a>
-      <a href="#resumen">RESUMEN</a>
-      <a href="#proyectos">PROYECTOS</a>
-      <a href="#habilidades">HABILIDADES</a>
-      <a href="#contacto" class="btn-nav-cta">CONTACTO</a>
-    </nav>
-  </header>
-
-  <main id="main-content">
-
-    <!-- SOBRE MI -->
-    <section id="sobre-mi" class="panel hero-section">
-      <header>
-        <h2 class="section-title">01 · SOBRE MÍ</h2>
-        <h3 class="tagline">Ingeniero en Sistemas enfocado en soluciones empresariales.</h3>
-      </header>
-      <div class="content-body">
-        <p>
-          Estudiante de Ingeniería en Sistemas con un sólido enfoque en **desarrollo de software**,
-          **bases de datos relacionales** y **arquitectura de redes**. He culminado proyectos académicos
-          que demuestran capacidad para integrar programación, infraestructura,
-          estructuras de datos complejas y automatización de procesos de negocio.
-        </p>
-        <p>
-          Mi *expertise* incluye el desarrollo de aplicaciones robustas con **Python** y **C**,
-          implementación de interfaces gráficas funcionales con **Tkinter**,
-          diseño y optimización de bases de datos **MySQL**
-          y configuración esencial de servidores **Windows Server** para entornos de producción.
-        </p>
-        <p>
-          Este portafolio es la prueba de mi **pensamiento lógico**,
-          mi **capacidad de análisis estructurado** y el **dominio técnico** necesario
-          para construir sistemas funcionales, escalables y bien documentados.
-        </p>
-      </div>
-      <a href="#proyectos" class="btn-primary-cta">Ver Proyectos Destacados <i class="fa-solid fa-arrow-down"></i></a>
-    </section>
-
-    <!-- RESUMEN -->
-    <section id="resumen" class="panel panel-outline summary-section">
-      <h2 class="section-title">02 · ÁREAS DE CONOCIMIENTO</h2>
-      <p class="section-description">Síntesis de las competencias técnicas adquiridas durante mi formación.</p>
-
-      <div class="summary-grid">
-
-        <article class="summary-block" aria-labelledby="programacion-heading">
-          <h3 id="programacion-heading"><i class="fa-solid fa-laptop-code"></i> PROGRAMACIÓN</h3>
-          <p>
-            Desarrollo de algoritmos de alto rendimiento en **Python** y **C**. Dominio de
-            estructuras de control, control de flujo, manejo de errores y validación de datos.
-            Construcción de aplicaciones de escritorio interactivas con **Tkinter**.
-          </p>
-        </article>
-
-        <article class="summary-block" aria-labelledby="bbdd-heading">
-          <h3 id="bbdd-heading"><i class="fa-solid fa-database"></i> BASES DE DATOS</h3>
-          <p>
-            Diseño avanzado de Bases de Datos Relacionales (**MySQL**), incluyendo
-            modelado Entidad-Relación (ER), normalización (hasta 3NF),
-            consultas **SQL** complejas (Joins, Stored Procedures) y operaciones **CRUD**.
-          </p>
-        </article>
-
-        <article class="summary-block" aria-labelledby="servidores-heading">
-          <h3 id="servidores-heading"><i class="fa-solid fa-server"></i> SERVIDORES & INFRAESTRUCTURA</h3>
-          <p>
-            Instalación, virtualización y configuración de **Windows Server**.
-            Administración de usuarios (AD), implementación de servicios esenciales (FTP),
-            gestión de recursos compartidos y planes de respaldo/recuperación básicos.
-          </p>
-        </article>
-
-        <article class="summary-block" aria-labelledby="redes-heading">
-          <h3 id="redes-heading"><i class="fa-solid fa-network-wired"></i> REDES DE COMPUTADORAS</h3>
-          <p>
-            Diseño e implementación lógica de redes LAN. Simulación y análisis de topologías
-            en **Cisco Packet Tracer**. Conceptos de comunicación Cliente-Servidor,
-            direccionamiento IP y seguridad perimetral básica.
-          </p>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- PROYECTOS -->
-    <section id="proyectos" class="panel panel-dark projects-section">
-      <h2 class="section-title">03 · PORTAFOLIO DE PROYECTOS</h2>
-      <p class="section-description">Una muestra de mis capacidades de desarrollo y arquitectura de sistemas.</p>
-
-      <div class="projects-grid">
-
-        <!-- Proyecto 1: Taller Práctico 1 -->
-        <article class="project-card" aria-labelledby="taller-titulo">
-          <figure class="project-image-container">
-            <img class="project-img" src="https://placehold.co/600x400/090712/c41e3a?text=Sistema+Alquiler" alt="Captura de pantalla de un sistema de alquiler de equipos.">
-          </figure>
-          <span class="project-tag">SISTEMA EMPRESARIAL</span>
-          <h3 id="taller-titulo">TALLER PRÁCTICO 1 · SISTEMA DE ALQUILER</h3>
-          <p class="project-summary">
-            Sistema de alquiler de equipos desarrollado para simular un entorno empresarial.
-            Integra algoritmos de **búsqueda secuencial** y estructura de datos tipo **pila**.
-          </p>
-          <p class="project-detail">
-            Administra clientes, inventario de equipos y el proceso completo de alquiler/devolución
-            con un fuerte enfoque en la **organización lógica del código**.
-          </p>
-          <a class="btn-doc" target="_blank"
-              href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Taller%20Pr%C3%A1ctico1_final.pdf&embedded=true">
-            <i class="fa-solid fa-file-pdf"></i> VER DOCUMENTACIÓN
-          </a>
-        </article>
-
-        <!-- Proyecto 2: Lenguaje C -->
-        <article class="project-card" aria-labelledby="lenguajec-titulo">
-          <figure class="project-image-container">
-            <img class="project-img" src="https://placehold.co/600x400/090712/c41e3a?text=Algoritmos+C" alt="Código en lenguaje C mostrando estructuras condicionales.">
-          </figure>
-          <span class="project-tag">PROGRAMACIÓN</span>
-          <h3 id="lenguajec-titulo">EJERCICIO PRÁCTICO · LENGUAJE C</h3>
-          <p class="project-summary">
-            Colección de ejercicios algorítmicos fundamentales desarrollados en C,
-            demostrando la comprensión de **estructuras condicionales anidadas** y **ciclos de repetición**.
-          </p>
-          <p class="project-detail">
-            Incluye lógica para cálculo de notas promedio, gestión de sueldos y operaciones
-            numéricas con estricta **validación de datos de entrada**.
-          </p>
-          <a class="btn-doc" target="_blank"
-              href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Ejercicio%20practico%201.pdf&embedded=true">
-            <i class="fa-solid fa-code"></i> VER PRÁCTICA
-          </a>
-        </article>
-
-        <!-- Proyecto 3: Windows Server -->
-        <article class="project-card" aria-labelledby="server-titulo">
-          <figure class="project-image-container">
-            <img class="project-img" src="https://placehold.co/600x400/090712/c41e3a?text=Windows+Server+FTP" alt="Configuración de un servidor Windows Server.">
-          </figure>
-          <span class="project-tag">SERVIDORES</span>
-          <h3 id="server-titulo">EJERCICIO PRÁCTICO · WINDOWS SERVER</h3>
-          <p class="project-summary">
-            Guía de instalación y configuración básica de Windows Server en un entorno
-            virtualizado. Enfocado en la **puesta en marcha de servicios**.
-          </p>
-          <p class="project-detail">
-            Detalle de la implementación del servicio **FTP**, gestión de accesos remotos y
-            configuración de usuarios con distintos niveles de privilegio.
-          </p>
-          <a class="btn-doc" target="_blank"
-              href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Ejercicio_Pr%C3%A1ctico_2.pdf&embedded=true">
-            <i class="fa-solid fa-file-pdf"></i> VER DOCUMENTACIÓN
-          </a>
-        </article>
-
-        <!-- Bloque de proyectos adicionales (El POS lo destaco aparte) -->
-        <aside class="more-projects-block">
-          <h4>Otros Trabajos Relevantes:</h4>
-          <ul>
-            <li>**LABORATORIO · SERVIDOR DE DATOS:** Implementación de estructura de respaldo con control de acceso.
-              <a href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Laboratorio%20Pr%C3%A1ctico%201%20(Version%20final)%20(1).pdf&embedded=true" target="_blank" title="Ver Laboratorio">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </li>
-            <li>**PARCIAL · LÓGICA:** Evaluación de análisis y criterio algorítmico para estructuras lógicas.
-              <a href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Parcial%201_jacobsamudio.pdf&embedded=true" target="_blank" title="Ver Examen">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-            </li>
-          </ul>
-        </aside>
-
-      </div>
-    </section>
-
-    <!-- POS (Sección de Detalle Destacado) -->
-    <section id="detalle-pos" class="panel panel-highlight pos-project-detail">
-      <h2 class="section-title">04 · PROYECTO ESTRELLA: SISTEMA POS "CHINOS CAFÉ"</h2>
-      
-      <figure class="project-main-image">
-        <img src="https://placehold.co/800x400/050308/c41e3a?text=Interfaz+Sistema+POS" class="project-img" alt="Captura de pantalla de la interfaz gráfica del Sistema POS 'Chinos Café'.">
-        <figcaption>Interfaz principal del Sistema de Punto de Venta (Python/Tkinter).</figcaption>
-      </figure>
-
-      <div class="pos-content-grid">
-        <div class="pos-description">
-          <p>
-            Este proyecto representa una solución integral de **Punto de Venta (POS)**
-            desarrollada completamente en **Python** con interfaz gráfica **Tkinter**.
-            Está conectado a una base de datos **MySQL** centralizada para la gestión
-            en tiempo real de transacciones, inventarios y facturación.
-          </p>
-          <p>
-            Su diseño se basó en un entorno comercial real, con el objetivo de
-            **automatizar procesos empresariales críticos** y asegurar una organización
-            estructurada y eficiente de los datos comerciales.
-          </p>
-        </div>
-
-        <div class="pos-details">
-          <div class="pos-columns">
-            <div>
-              <h4><i class="fa-solid fa-list-check"></i> MÓDULOS PRINCIPALES</h4>
-              <ul>
-                <li>**Gestión de Inventario** (Entradas/Salidas)</li>
-                <li>**Registro de Ventas** (Transacciones)</li>
-                <li>Gestión de **Proveedores**</li>
-                <li>Módulo de **Facturación** e Impresión</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4><i class="fa-solid fa-microchip"></i> STACK TECNOLÓGICO</h4>
-              <ul>
-                <li>**Lenguaje:** Python 3.x</li>
-                <li>**Frontend/GUI:** Tkinter (nativo de Python)</li>
-                <li>**Base de Datos:** MySQL (conector)</li>
-                <li>**Arquitectura:** Red Local Cliente-Servidor</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <a class="btn-doc btn-full-width" target="_blank"
-          href="https://docs.google.com/gview?url=https://github.com/Asthz/Portafolio/raw/main/Examen%20Parcial2(entrega).pdf&embedded=true">
-        <i class="fa-solid fa-book"></i> ACCEDER A LA DOCUMENTACIÓN COMPLETA DEL SISTEMA
-      </a>
-    </section>
-
-    <!-- HABILIDADES -->
-    <section id="habilidades" class="panel skills-section">
-      <h2 class="section-title">05 · HABILIDADES TÉCNICAS & BLANDAS</h2>
-      <p class="section-description">Un resumen detallado de las herramientas y capacidades que ofrezco.</p>
-      
-      <div class="skills-category">
-        <h3><i class="fa-solid fa-code"></i> Desarrollo y Lógica</h3>
-        <div class="skills-grid">
-          <div class="skill"><i class="fa-brands fa-python"></i> Python</div>
-          <div class="skill"><i class="fa-solid fa-c"></i> Lenguaje C</div>
-          <div class="skill"><i class="fa-solid fa-gears"></i> Programación Lógica</div>
-          <div class="skill"><i class="fa-solid fa-bug"></i> Debugging & Pruebas</div>
-          <div class="skill"><i class="fa-solid fa-desktop"></i> Tkinter (GUI)</div>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h3><i class="fa-solid fa-database"></i> Bases de Datos</h3>
-        <div class="skills-grid">
-          <div class="skill"><i class="fa-solid fa-database"></i> MySQL / SQL</div>
-          <div class="skill"><i class="fa-solid fa-filter"></i> Consultas Avanzadas</div>
-          <div class="skill"><i class="fa-solid fa-table"></i> Modelado ER & Normalización</div>
-          <div class="skill"><i class="fa-solid fa-diagram-project"></i> Estructura de Datos</div>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h3><i class="fa-solid fa-server"></i> Servidores e Infraestructura</h3>
-        <div class="skills-grid">
-          <div class="skill"><i class="fa-brands fa-windows"></i> Windows Server Admin</div>
-          <div class="skill"><i class="fa-solid fa-network-wired"></i> Redes LAN & Topologías</div>
-          <div class="skill"><i class="fa-solid fa-diagram-project"></i> Cisco Packet Tracer</div>
-          <div class="skill"><i class="fa-solid fa-folder"></i> Gestión de Acceso (FTP)</div>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h3><i class="fa-solid fa-user-gear"></i> Habilidades Blandas</h3>
-        <div class="skills-grid">
-          <div class="skill"><i class="fa-solid fa-brain"></i> Pensamiento Analítico</div>
-          <div class="skill"><i class="fa-solid fa-lightbulb"></i> Resolución de Problemas</div>
-          <div class="skill"><i class="fa-solid fa-users"></i> Trabajo Colaborativo</div>
-          <div class="skill"><i class="fa-solid fa-clock"></i> Gestión del Tiempo</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO (Call to Action Fuerte) -->
-    <section id="contacto" class="panel panel-outline contact-section">
-      <h2 class="section-title">06 · ¡HABLEMOS!</h2>
-      <p class="section-description">
-        Si está buscando un ingeniero en sistemas con capacidad de desarrollo y enfoque en soluciones
-        empresariales, contácteme directamente.
-      </p>
-      
-      <a class="contact-email-link" href="mailto:jacob.samudio@utp.ac.pa" title="Enviar correo a Jacob Samudio">
-        <i class="fa-solid fa-envelope"></i> jacob.samudio@utp.ac.pa
-      </a>
-
-      <div class="social-links">
-        <a href="https://github.com/Asthz" target="_blank" title="Ver Perfil de GitHub">
-          <i class="fa-brands fa-github fa-2x"></i>
-        </a>
-        <!-- Puedes añadir más enlaces aquí si tienes LinkedIn o similares -->
-      </div>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 Jacob Alexander Samudio Martínez | Portafolio Académico de la Universidad Tecnológica de Panamá</p>
-    <p class="footer-credits">Desarrollado con HTML5, CSS y pasión por los sistemas.</p>
-  </footer>
-
-</div> <!-- Cierre de site-wrapper -->
 
 </body>
 </html>
